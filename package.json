@@ -1,0 +1,7 @@
+{
+  "name": "mojoe",
+  "private": "true",
+  "scripts": {
+    "run:kit": "cd apps/kit && pnpm run dev"
+  }
+}

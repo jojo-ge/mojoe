@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Lobster&display=swap");
+@import "tailwindcss";
+
+:root {
+  --color-primary-100: #f2eeff;
+  --color-primary-200: #e2d6ff;
+  --color-primary-300: #c4b0f4;
+  --color-primary-400: #9c82dc;
+  --color-primary-500: #7353ba;
+  --color-primary-600: #5c42a0;
+  --color-primary-700: #483386;
+  --color-primary-800: #35256d;
+  --color-primary-900: #231954;
+
+  --color-secondary-100: #fef0ff;
+  --color-secondary-200: #fde2ff;
+  --color-secondary-300: #fcc4ff;
+  --color-secondary-400: #fbb5ff;
+  --color-secondary-500: #faa6ff;
+  --color-secondary-600: #e182e6;
+  --color-secondary-700: #c561cc;
+  --color-secondary-800: #a943b3;
+  --color-secondary-900: #8c2999;
+
+  --font-body: "Afacad Flux", serif;
+  --font-display: "Lobster", serif;
+
+  font-family: var(--font-body);
+  background: #e7e7e7;
+  color: var(--color-grey-700);
+}
