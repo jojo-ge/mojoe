@@ -99,18 +99,18 @@ setActiveTab("KitTypography");
         </li>
       </ul>
     </div>
-    <UIAtCard class="h-fit col-span-1">
+    <UIAtCard class="h-fit col-span-1 overflow-hidden" padding="none">
       <UIAtHeading
         size="h3"
         styleSize="h3"
         :text="menuTitle"
-        class="text-primary"
+        class="text-primary mx-4 mt-6 mb-3"
       />
       <ul>
         <li
           v-for="option in menuOptions[<keyof typeof menuOptions>activeMainTab]"
           :key="option.value"
-          class="hover:bg-primary p-2 hover:text-white cursor-pointer"
+          class="hover:bg-primary p-2 hover:text-white cursor-pointer px-6"
           :class="{ 'text-primary font-semibold': activeTab === option.value }"
           @click="setActiveTab(option.value)"
         >
