@@ -50,10 +50,10 @@ const containerClassList = computed(() => {
 });
 const indicatorClassList = computed(() => {
   return twMerge(
-    cva("absolute inset-y-0 my-auto transition duration-200", {
+    cva("absolute inset-y-0 my-auto transition- duration-200", {
       variants: {
         active: {
-          true: "right-0",
+          true: "left-[calc(100%-24px)]",
           false: "left-0 text-primary-400",
         },
       },

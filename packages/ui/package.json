@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@floating-ui/vue": "^1.1.6",
+    "@nuxt/image": "1.9.0",
     "@tailwindcss/vite": "^4.0.6",
     "@vueuse/core": "^12.6.1",
     "class-variance-authority": "^0.7.1",

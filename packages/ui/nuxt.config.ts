@@ -5,7 +5,7 @@ const { resolve } = createResolver(import.meta.url);
 export default defineNuxtConfig({
   alias: { "~ui": resolve("./") },
   css: ["~ui/assets/css/main.css"],
-
+  modules: ["@nuxt/image"],
   vite: {
     plugins: [tailwindcss()],
   },

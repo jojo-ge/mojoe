@@ -32,10 +32,14 @@ const menuOptions = [
     label: "Switch input",
     value: "KitInputSwitch",
   },
+  {
+    label: "Cards",
+    value: "KitCards",
+  },
 ];
 
 const activeTab = ref("KitTypography");
-const activeComponent = ref();
+const activeComponent = shallowRef();
 
 const setActiveTab = (componentName: string) => {
   activeTab.value = componentName;
@@ -62,8 +66,13 @@ setActiveTab("KitTypography");
         </li>
       </ul>
     </UIAtCard>
-    <UIAtCard class="w-full col-span-4">
+    <UIAtCard class="w-full col-span-4" variant="surface">
       <component :is="activeComponent" />
     </UIAtCard>
+  </div>
+  <div class="fixed inset-0 -top-200 -z-200 flex justify-center items-start">
+    <div
+      class="bg-radial from-secondary from-10% to-transparent to-50% h-400 w-400"
+    />
   </div>
 </template>

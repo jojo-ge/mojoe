@@ -1,16 +1,28 @@
 <script setup lang="ts">
 const options = [
   {
-    value: "hi",
+    value: "who",
     label: "Who",
   },
   {
-    value: "hii",
+    value: "what",
     label: "What",
   },
   {
-    value: "hiii",
+    value: "where",
     label: "Where",
+  },
+  {
+    value: "when",
+    label: "When",
+  },
+  {
+    value: "how",
+    label: "How",
+  },
+  {
+    value: "why",
+    label: "Why",
   },
 ];
 

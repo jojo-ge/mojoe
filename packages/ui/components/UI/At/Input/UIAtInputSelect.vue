@@ -57,13 +57,26 @@ const placeholderValue = computed(() => {
   }
   return props.placeholder;
 });
+
+const id = useId();
 </script>
 
 <template>
   <div>
+    <UIAtInputLabel
+      :text="label"
+      class="block"
+      :forId="id"
+      :hideLabel="hideLabel"
+    />
     <UIAtFloating @clickOutside="toggleOpen(false)">
       <template #reference>
-        <div :class="[anchorClassList]" @click="toggleOpen()">
+        <div
+          :class="[anchorClassList]"
+          @click="toggleOpen()"
+          :id="id"
+          role="select"
+        >
           <span>{{ placeholderValue }}</span>
         </div>
       </template>
