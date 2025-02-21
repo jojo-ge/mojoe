@@ -9,14 +9,17 @@ const optionsOpen = ref(false);
 
 const anchorClassList = computed(() => {
   return twMerge(
-    cva("border border-primary py-2 px-4 rounded-lg min-w-48 cursor-pointer", {
-      variants: {
-        optionsOpen: {
-          true: "rounded-b-none border-b-0",
-          false: "",
+    cva(
+      "border border-primary bg-white py-2 px-4 rounded-lg min-w-48 cursor-pointer",
+      {
+        variants: {
+          optionsOpen: {
+            true: "rounded-b-none border-b-0",
+            false: "",
+          },
         },
-      },
-    })({
+      }
+    )({
       optionsOpen: optionsOpen.value,
     })
   );

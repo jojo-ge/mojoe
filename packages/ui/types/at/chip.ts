@@ -4,4 +4,5 @@ export type ChipProps = {
   variant?: ChipVariant;
   text: string;
   dismissable?: boolean;
+  clickable?: boolean;
 };

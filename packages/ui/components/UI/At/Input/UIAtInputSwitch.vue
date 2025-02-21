@@ -16,7 +16,7 @@ const classList = computed(() => {
         variants: {
           value: {
             true: "bg-primary",
-            false: "bg-grey-200",
+            false: "bg-white",
           },
           labelPosition: {
             top: "flex flex-col",

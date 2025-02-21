@@ -11,7 +11,7 @@ const emit = defineEmits<{
 const classList = computed(() => {
   return twMerge(
     cva(
-      "h-5 w-5  rounded-sm border-1 cursor-pointer border-primary text-white flex items-center justify-center",
+      "h-5 w-5  rounded-sm border-1 cursor-pointer border-primary bg-white text-white flex items-center justify-center",
       {
         variants: {
           value: {
@@ -58,8 +58,8 @@ const id = useId();
 <template>
   <div :class="[containerClassList]">
     <UIAtInputLabel :forId="id" :text="label" :hideLabel="hideLabel" />
-    <button rold="checkbox" :class="[classList]" @click="updateValue" :id="id">
-      <UIAtIcon size="sm" path="check" />
+    <button role="checkbox" :class="[classList]" @click="updateValue" :id="id">
+      <UIAtIcon v-if="value" size="sm" path="check" />
     </button>
   </div>
 </template>

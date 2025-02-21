@@ -4,6 +4,7 @@ import type { ChipProps } from "~/types/at/chip";
 const props = withDefaults(defineProps<ChipProps>(), {
   variant: "primary",
   dismissable: false,
+  clickable: false,
 });
 
 const classList = computed(() => {
@@ -20,10 +21,28 @@ const classList = computed(() => {
           true: "flex items-center justify-between gap-2 pe-0",
           false: "",
         },
+        clickable: {
+          true: "cursor-pointer",
+          false: "",
+        },
       },
+      compoundVariants: [
+        {
+          variant: "primary",
+          clickable: true,
+          class: "hover:bg-primary-400 hover:border-primary-400",
+        },
+        {
+          variant: "outline",
+          clickable: true,
+          class:
+            "hover:border-primary-400 hover:text-white hover:bg-primary-400",
+        },
+      ],
     })({
       variant: props.variant,
       dismissable: props.dismissable,
+      clickable: props.clickable,
     })
   );
 });

@@ -37,8 +37,21 @@ const menuOptions = {
       label: "Cards",
       value: "KitCards",
     },
+    {
+      label: "Flex layout",
+      value: "KitLayout",
+    },
   ],
-  molecules: [],
+  molecules: [
+    {
+      label: "Navigation",
+      value: "KitNavigation",
+    },
+    {
+      label: "Menu",
+      value: "KitMenu",
+    },
+  ],
   organisms: [],
 };
 
@@ -57,9 +70,9 @@ const mainTabs = [
   },
 ];
 
-const activeMainTab = ref("atoms");
+const activeMainTab = ref("molecules");
 
-const activeTab = ref("KitTypography");
+const activeTab = ref("KitNavigation");
 const activeComponent = shallowRef();
 
 const setActiveTab = (componentName: string) => {
@@ -73,7 +86,7 @@ const menuTitle = computed(() => {
   return mainTabs.find((e) => e.value === activeMainTab.value)?.label;
 });
 
-setActiveTab("KitTypography");
+setActiveTab("KitNavigation");
 </script>
 
 <template>
@@ -126,7 +139,14 @@ setActiveTab("KitTypography");
   </div>
   <div class="fixed inset-0 -top-200 -z-200 flex justify-center items-start">
     <div
-      class="bg-radial from-secondary from-10% to-transparent to-50% h-400 w-400"
+      class="bg-radial from-primary-300 from-10% to-transparent to-50% h-400 w-400"
     />
   </div>
+  <NuxtPage />
+  <div
+    class="fixed top-40 -left-200 -z-200 bg-radial from-primary-200 from-10% to-transparent to-50% h-400 w-400"
+  />
+  <div
+    class="fixed -top-100 -right-200 -z-200 bg-radial from-primary-200 from-10% to-transparent to-50% h-700 w-400"
+  />
 </template>

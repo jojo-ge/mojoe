@@ -10,7 +10,7 @@ const model = defineModel<string>({ required: true });
 
 const classList = computed(() => {
   return twMerge(
-    cva("border border-primary py-2 px-4 rounded-lg", {
+    cva("border border-primary bg-white py-2 px-4 rounded-lg", {
       variants: {
         hasTrailingButton: {
           true: "pe-10",
