@@ -12,7 +12,7 @@ const id = useId();
       :key="`${id}-${index}`"
       :to="item.to"
     >
-      <UIAtChip
+      <UIAtBadge
         :text="item.label"
         :clickable="true"
         :variant="activeLinkLabel === item.label ? 'primary' : 'outline'"

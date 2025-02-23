@@ -1,7 +1,7 @@
 import type { Positions } from "~/types/ui";
 import type { InputAttributes } from ".";
 
-export type InputSwitchProps = InputAttributes & {
+export type InputToggleProps = InputAttributes & {
   value: boolean;
   labelPosition?: Positions;
 };

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { InputSwitchProps } from "~/types/at/input/switch";
+import type { InputToggleProps } from "~/types/at/input/toggle";
 
-const props = withDefaults(defineProps<InputSwitchProps>(), {
+const props = withDefaults(defineProps<InputToggleProps>(), {
   labelPosition: "right",
 });
 

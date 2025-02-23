@@ -30,8 +30,8 @@ const menuOptions = {
       value: "KitInputSelect",
     },
     {
-      label: "Switch input",
-      value: "KitInputSwitch",
+      label: "Toggle input",
+      value: "KitInputToggle",
     },
     {
       label: "Cards",
@@ -104,7 +104,7 @@ setActiveTab("KitNavigation");
           :key="tab.value"
           @click="activeMainTab = tab.value"
         >
-          <UIAtChip
+          <UIAtBadge
             class="cursor-pointer"
             :text="tab.label"
             :variant="activeMainTab === tab.value ? 'primary' : 'outline'"

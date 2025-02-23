@@ -4,30 +4,30 @@ const value = ref(false);
 
 <template>
   <KitWrapper class="flex-col gap-12">
-    <UIAtInputSwitch
+    <UIAtInputToggle
       :value="value"
-      label="switch the value"
-      name="my switch"
+      label="Toggle the value"
+      name="my Toggle"
       @update:modelValue="value = !value"
     />
-    <UIAtInputSwitch
+    <UIAtInputToggle
       :value="value"
-      label="switch the value"
-      name="my switch"
+      label="Toggle the value"
+      name="my Toggle"
       labelPosition="top"
       @update:modelValue="value = !value"
     />
-    <UIAtInputSwitch
+    <UIAtInputToggle
       :value="value"
-      label="switch the value"
-      name="my switch"
+      label="Toggle the value"
+      name="my Toggle"
       labelPosition="bottom"
       @update:modelValue="value = !value"
     />
-    <UIAtInputSwitch
+    <UIAtInputToggle
       :value="value"
-      label="switch the value"
-      name="my switch"
+      label="Toggle the value"
+      name="my Toggle"
       labelPosition="left"
       @update:modelValue="value = !value"
     />
