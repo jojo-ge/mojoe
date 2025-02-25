@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { ChipProps } from "~/types/at/chip";
+import type { BadgeProps } from "~/types/at/badge";
 
-const props = withDefaults(defineProps<ChipProps>(), {
+const props = withDefaults(defineProps<BadgeProps>(), {
   variant: "primary",
   dismissable: false,
   clickable: false,

@@ -41,8 +41,6 @@ mkdir -p assets/css
 # Create main.css with Tailwind import and theme configuration
 echo "Creating Tailwind CSS file..."
 cat > assets/css/main.css << 'EOL'
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Lobster&display=swap");
 @import "tailwindcss";
 

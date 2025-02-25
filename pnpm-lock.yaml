@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  apps/kit:
+  apps/buildthing:
     dependencies:
       '@mojoe/ui':
         specifier: workspace:^
@@ -29,7 +29,7 @@ importers:
         specifier: latest
         version: 4.5.0(vue@3.5.13(typescript@5.7.3))
 
-  apps/newapp:
+  apps/kit:
     dependencies:
       '@mojoe/ui':
         specifier: workspace:^

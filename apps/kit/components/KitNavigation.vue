@@ -19,7 +19,7 @@ const navigationItems = [
 
 <template>
   <KitWrapper>
-    <UIMoNavigationChips
+    <UIMoNavigationBadges
       :navigationItems="navigationItems"
       activeLinkLabel="Home"
     />

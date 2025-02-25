@@ -7,7 +7,7 @@ const id = useId();
 
 <template>
   <UIAtLayoutFlex spacing="md">
-    <NuxtLink
+    <UIAtLink
       v-for="(item, index) in navigationItems"
       :key="`${id}-${index}`"
       :to="item.to"
@@ -17,6 +17,6 @@ const id = useId();
         :clickable="true"
         :variant="activeLinkLabel === item.label ? 'primary' : 'outline'"
       />
-    </NuxtLink>
+    </UIAtLink>
   </UIAtLayoutFlex>
 </template>

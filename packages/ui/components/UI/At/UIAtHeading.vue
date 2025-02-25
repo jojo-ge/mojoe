@@ -23,7 +23,7 @@ const classList = computed(() => {
         },
       },
     })({
-      size: props.size,
+      size: props.styleSize,
       fontStyle: props.fontStyle,
     })
   );

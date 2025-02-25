@@ -1,8 +1,7 @@
-export type ChipVariant = "primary" | "outline";
+export type ChipColors = "red" | "green" | "primary" | "secondary";
 
 export type ChipProps = {
-  variant?: ChipVariant;
-  text: string;
-  dismissable?: boolean;
-  clickable?: boolean;
+  total?: number | null;
+  active: boolean;
+  color?: ChipColors;
 };
