@@ -5,6 +5,7 @@ const props = withDefaults(defineProps<LayoutFlexProps>(), {
   direction: "row",
   spacing: "md",
   list: false,
+  wrap: false,
 });
 
 const classList = computed(() => {
@@ -24,8 +25,12 @@ const classList = computed(() => {
           col: "flex-col",
           row: "",
         },
+        wrap: {
+          true: "flex-wrap",
+          false: "",
+        },
       },
-    })({ spacing: props.spacing, direction: props.direction })
+    })({ spacing: props.spacing, direction: props.direction, wrap: props.wrap })
   );
 });
 

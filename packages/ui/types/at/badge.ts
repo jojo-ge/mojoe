@@ -1,4 +1,4 @@
-export type BadgeVariant = "primary" | "outline";
+export type BadgeVariant = "primary" | "outline" | "skeleton";
 
 export type BadgeProps = {
   variant?: BadgeVariant;

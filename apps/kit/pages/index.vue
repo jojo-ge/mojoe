@@ -45,6 +45,10 @@ const menuOptions = {
       label: "Flex layout",
       value: "KitLayout",
     },
+    {
+      label: "Avatars",
+      value: "KitAvatar",
+    },
   ],
   molecules: [
     {
@@ -80,7 +84,7 @@ const mainTabs = [
 
 const activeMainTab = ref("atoms");
 
-const activeTab = ref("KitTypography");
+const activeTab = ref("KitAvatar");
 const activeComponent = shallowRef();
 
 const setActiveTab = (componentName: string) => {
@@ -94,7 +98,7 @@ const menuTitle = computed(() => {
   return mainTabs.find((e) => e.value === activeMainTab.value)?.label;
 });
 
-setActiveTab("KitTypography");
+setActiveTab("KitAvatar");
 </script>
 
 <template>

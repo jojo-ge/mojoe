@@ -4,10 +4,11 @@ import type { CardProps } from "~/types/at/card";
 const props = withDefaults(defineProps<CardProps>(), {
   padding: "md",
   variant: "default",
+  elevation: "sm",
 });
 const classList = computed(() => {
   return twMerge(
-    cva("bg-white shadow-lg drop-shadow-lg  rounded-xl", {
+    cva("bg-white rounded-xl border", {
       variants: {
         padding: {
           none: "p-0",
@@ -20,10 +21,18 @@ const classList = computed(() => {
           default: "",
           surface: "bg-white/75  backdrop-blur-xl",
         },
+        elevation: {
+          xs: "border-gray-200 shadow-xs drop-shadow-xs",
+          sm: "border-gray-200 shadow-sm drop-shadow-sm",
+          md: "border-gray-200 shadow-md drop-shadow-md",
+          lg: "border-gray-200 shadow-lg drop-shadow-lg",
+          none: "border-transparent",
+        },
       },
     })({
       padding: props.padding,
       variant: props.variant,
+      elevation: props.elevation,
     })
   );
 });
