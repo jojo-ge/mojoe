@@ -8,7 +8,7 @@ type Props = {
 const props = defineProps<Props>();
 
 const emit = defineEmits<{
-  messageSent: [message: string];
+  messageSent: [message: string, responseType?: string];
 }>();
 const newMessageInput = ref("");
 const send = () => {
@@ -62,46 +62,13 @@ defineExpose({
 </script>
 
 <template>
-  <div class="relative h-[calc(100vh-96px)] flex flex-col justify-end w-full">
-    <div
-      ref="chatContainer"
-      class="px-2 pb-6 h-full grow overflow-y-scroll pb-10 flex flex-col duration-500"
-      :class="[disableInput ? 'justify-end' : '']"
-    >
+  <div
+    class="relative h-screen min-h-fit flex flex-col pb-14 justify-end w-full"
+  >
+    <div ref="chatContainer">
       <slot />
     </div>
-    <div class="w-full flex flex-col justify-end">
-      <UIAtLayoutFlex
-        :wrap="true"
-        class="mb-4 overflow-hidden bg-white py-2 border-t-2 border-grey-200"
-        :class="[badgesContainerClassList]"
-      >
-        <UIAtBadge
-          @click="emit('messageSent', 'Show me something cool')"
-          text="Show me something cool"
-          :clickable="true"
-        />
-        <UIAtBadge
-          @click="emit('messageSent', 'I dont know')"
-          text="I dont know"
-          :clickable="true"
-        />
-        <UIAtBadge
-          @click="emit('messageSent', 'Maybe next time')"
-          text="Maybe next time"
-          :clickable="true"
-        />
-        <UIAtBadge
-          @click="emit('messageSent', 'One day, maybe')"
-          text="One day, maybe one day"
-          :clickable="true"
-        />
-        <UIAtBadge
-          @click="emit('messageSent', 'Some other option')"
-          text="Some other option"
-          :clickable="true"
-        />
-      </UIAtLayoutFlex>
+    <div class="absolute bottom-1 inset-x-0">
       <UIAtInputText
         :placeholder="
           disableInput ? 'Loading a response...' : 'Enter a message'
@@ -116,6 +83,41 @@ defineExpose({
         :hideLabel="true"
         @keydown.enter="send"
       />
+      <!--   <UIAtLayoutFlex
+        :wrap="true"
+        class="mb-4 overflow-hidden bg-white py-2 border-t-2 border-grey-200"
+        :class="[badgesContainerClassList]"
+      >
+        <UIAtBadge
+          @click="
+            emit('messageSent', 'Show me something cool', 'recommendedResponse')
+          "
+          text="Show me something cool"
+          :clickable="true"
+        />
+        <UIAtBadge
+          @click="emit('messageSent', 'I dont know', 'recommendedResponse')"
+          text="I dont know"
+          :clickable="true"
+        />
+        <UIAtBadge
+          @click="emit('messageSent', 'Maybe next time', 'recommendedResponse')"
+          text="Maybe next time"
+          :clickable="true"
+        />
+        <UIAtBadge
+          @click="emit('messageSent', 'One day, maybe', 'recommendedResponse')"
+          text="One day, maybe one day"
+          :clickable="true"
+        />
+        <UIAtBadge
+          @click="
+            emit('messageSent', 'Some other option', 'recommendedResponse')
+          "
+          text="Some other option"
+          :clickable="true"
+        />
+      </UIAtLayoutFlex> -->
     </div>
   </div>
 </template>

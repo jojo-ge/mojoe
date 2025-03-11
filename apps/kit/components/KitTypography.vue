@@ -42,5 +42,19 @@
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique maxime
       eos recusandae
     </p>
+    <p class="font-bold text-lg">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique maxime
+      eos recusandae
+    </p>
+    <p class="font-bold text-xl">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique maxime
+      eos recusandae
+    </p>
+    <p>
+      <em>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
+        maxime eos recusandae
+      </em>
+    </p>
   </div>
 </template>

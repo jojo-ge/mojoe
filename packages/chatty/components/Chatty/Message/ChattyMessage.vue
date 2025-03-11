@@ -8,8 +8,13 @@ const classList = computed(() => {
     cva("w-fit", {
       variants: {
         fromMe: {
-          true: "!bg-primary-300",
+          true: "!bg-primary-500 text-white",
           false: "",
+        },
+        role: {
+          user: "",
+          ai: "!bg-secondary-100",
+          system: "!bg-primary-100",
         },
         previousMessageFromSameSender: {
           true: "mt-1",
@@ -19,6 +24,7 @@ const classList = computed(() => {
     })({
       fromMe: props.fromMe,
       previousMessageFromSameSender: props.previousMessageFromSameSender,
+      role: props.message.sender.role,
     })
   );
 });

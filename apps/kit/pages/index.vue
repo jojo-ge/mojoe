@@ -52,12 +52,16 @@ const menuOptions = {
   ],
   molecules: [
     {
-      label: "Navigation",
+      label: "Badge Navigation",
       value: "KitNavigation",
     },
     {
       label: "Menu",
       value: "KitMenu",
+    },
+    {
+      label: "Tabs",
+      value: "KitTabs",
     },
     {
       label: "Alert",

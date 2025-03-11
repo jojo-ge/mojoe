@@ -19,6 +19,6 @@ const selected = ref("home");
 
 <template>
   <KitWrapper>
-    <UIMoMenu :menuItems="menuItems" v-model="selected" />
+    <UIMoTabList :tabListItems="menuItems" v-model="selected" />
   </KitWrapper>
 </template>
