@@ -22,11 +22,14 @@ const classList = computed(() => {
     cva("flex items-center gap-1", {
       variants: {
         variant: {
-          primary:
-            "bg-primary text-white rounded-xl border-2 border-primary shadow-md",
-          outline:
-            "bg-white text-primary rounded-xl border-2 border-primary  shadow-md ",
-          link: "text-primary font-semibold p-2 rounded-xl border-2 border-transparent",
+          primary: `bg-primary text-white rounded-xl border-2 border-primary shadow-md 
+          hover:bg-primary-400 hover:border-primary-400 
+          aria-disabled:bg-primary-400 aria-disabled:border-primary-400`,
+          outline: `bg-white text-primary rounded-xl border-2 border-primary  shadow-md
+          hover:border-primary-400 hover:text-white hover:bg-primary-400
+          aria-disabled:border-primary-400 aria-disabled:text-primary-400 aria-disabled:bg-grey-200`,
+          link: `text-primary font-semibold p-2 rounded-xl border-2 border-transparent
+          hover:text-primary-400 aria-disabled:text-primary-400`,
         },
         size: {
           sm: "px-2 py-1 text-sm",
@@ -46,39 +49,6 @@ const classList = computed(() => {
           false: "",
         },
       },
-      compoundVariants: [
-        {
-          disabled: false,
-          variant: "primary",
-          class: "hover:bg-primary-400 hover:border-primary-400",
-        },
-        {
-          disabled: true,
-          variant: "primary",
-          class: "bg-primary-400 border-primary-400",
-        },
-        {
-          disabled: false,
-          variant: "outline",
-          class:
-            "hover:border-primary-400 hover:text-white hover:bg-primary-400",
-        },
-        {
-          disabled: true,
-          variant: "outline",
-          class: "bg-grey-200 border-primary-400 text-primary-400",
-        },
-        {
-          disabled: false,
-          variant: "link",
-          class: "hover:text-primary-400",
-        },
-        {
-          disabled: true,
-          variant: "link",
-          class: "text-primary-400",
-        },
-      ],
     })({
       variant: props.variant,
       size: props.size,
@@ -93,7 +63,7 @@ const id = useId();
 </script>
 
 <template>
-  <button :class="[classList]" :id="id">
+  <button :class="[classList]" :id="id" :aria-disabled="disabled">
     <template v-if="!loading">
       <UIAtIcon
         v-if="iconPath"

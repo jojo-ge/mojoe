@@ -29,3 +29,16 @@
   background: #e7e7e7;
   color: var(--color-grey-700);
 }
+
+html,
+body,
+#__nuxt {
+  height: 100%;
+}
+
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}

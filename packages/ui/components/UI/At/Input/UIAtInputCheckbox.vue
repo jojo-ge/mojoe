@@ -34,7 +34,7 @@ const classList = computed(() => {
 });
 const containerClassList = computed(() => {
   return twMerge(
-    cva("flex gap-1 items-center", {
+    cva("flex gap-1 items-center w-fit", {
       variants: {
         labelPosition: {
           top: "flex-col",
